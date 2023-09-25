@@ -1,0 +1,38 @@
+
+<%-include('header')-%>
+
+<div class="text-center center-div" id="login">
+  <div class="middle-menu container w-25 py-5">
+    <div class="title pb-5">
+      
+      <h2 class="font-weight-bold text-black">Apple Login</h2>
+      
+      <span class="pop text-black">Log in if you are an existing user</span>
+      <% if(locals.logout){%>
+        <div class="alert alert-success text-center  m-2 p-2">
+          <%=logout %>
+        </div>
+      <%}%>
+
+
+      <% if(locals.message){%>
+        <div class="alert alert-danger text-center m-2 p-2 border "> <%=message%></div>
+        <%}%>
+
+
+
+    </div>
+    <form action="/route/login" method="POST">
+      <div class="form-group mb-4">
+        <input type="email" class="form-control emailclass" placeholder="email" name="email">
+        
+      </div>
+      <div class="form-group mt-3">
+        <input type="password" class="form-control passclass" name="password" placeholder="password">
+      </div>
+      <button type="submit" class="btn btn-success rounded-pill mt-3">LOGIN</button>
+    </form>
+  </div>
+</div>
+
+ <%-include('footer')-%>
