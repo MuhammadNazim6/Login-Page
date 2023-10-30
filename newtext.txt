@@ -1,0 +1,3 @@
+This setup will log the request method, URL, and the response time in milliseconds for each incoming request.
+
+Morgan is highly customizable and can be adapted to your specific logging requirements. It's a useful tool for debugging and monitoring your Node.js web applications.
